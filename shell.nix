@@ -1,9 +1,15 @@
 {pkgs ? import <nixpkgs> {}}:
 pkgs.mkShellNoCC {
   packages = with pkgs; [
-    nil
+    # nix
+    nixd
     alejandra
     statix
-    vulnix
+    deadnix
+
+    # lua
+    lua-language-server
+    luajitPackages.luacheck
+    stylua
   ];
 }

@@ -5,7 +5,9 @@ do
   ok, _G.nixInfo = pcall(require, vim.g.nix_info_plugin_name)
   if not ok then
     package.loaded[vim.g.nix_info_plugin_name] = setmetatable({}, {
-      __call = function (_, default) return default end
+      __call = function(_, default)
+        return default
+      end,
     })
     _G.nixInfo = require(vim.g.nix_info_plugin_name)
     -- If you always use the fetcher function to fetch nix values,
@@ -16,11 +18,10 @@ do
 end
 
 -- load basic options and keymaps
-require('options')
+require("options")
 
-vim.lsp.config('nil_ls', {
-  cmd = { 'nil' },
-  filetypes = { 'nix' },
-  root_markers = { 'flake.nix', '.git' },
-})
-vim.lsp.enable('nil_ls')
+-- load packages
+require("lz.n").load("plugins")
+
+-- load lsp
+require("lsp")
