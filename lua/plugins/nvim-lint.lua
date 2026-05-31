@@ -4,8 +4,9 @@ return {
   after = function()
     local lint = require("lint")
     lint.linters_by_ft = {
-      nix = { "statix", "deadnix" },
+      nix = { "deadnix" },
       lua = { "luacheck" },
+      toml = { "tombi" },
     }
     vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost" }, {
       callback = function()
