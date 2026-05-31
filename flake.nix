@@ -26,7 +26,7 @@
         default = self.wrappers.neovim;
       };
       overlays = {
-        neovim = final: prev: {neovim = self.wrappers.neovim.wrap {pkgs = final;};};
+        neovim = final: {neovim = self.wrappers.neovim.wrap {pkgs = final;};};
         default = self.overlays.neovim;
       };
       packages = forAllSystems (
