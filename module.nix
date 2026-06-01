@@ -26,10 +26,15 @@ inputs: {
     specs.general = {
       after = ["lzn"];
       runtimePkgs = with pkgs; [
+        # lsp requires notify
         inotify-tools
+
+        # snack picker requires sqlite
+        sqlite
       ];
       lazy = true;
       data = with pkgs.vimPlugins; [
+        auto-session
         blink-cmp
         conform-nvim
         lazydev-nvim
