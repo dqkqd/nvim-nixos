@@ -17,6 +17,8 @@ do
   end
 end
 
+vim.cmd.colorscheme("catppuccin-mocha")
+
 -- load basic options and keymaps
 require("options")
 

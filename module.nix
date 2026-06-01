@@ -18,6 +18,12 @@ inputs: {
 
   config = {
     settings.config_directory = ./.;
+    specs.colorscheme = {
+      data = with pkgs.vimPlugins; [
+        catppuccin-nvim
+      ];
+      before = ["INIT_MAIN"];
+    };
     specs.lzn = {
       data = with pkgs.vimPlugins; [
         lz-n
@@ -38,6 +44,7 @@ inputs: {
         blink-cmp
         conform-nvim
         gitsigns-nvim
+        catppuccin-nvim
         lazydev-nvim
         nvim-lint
         nvim-treesitter.withAllGrammars
