@@ -42,14 +42,15 @@ inputs: {
       data = with pkgs.vimPlugins; [
         auto-session
         blink-cmp
+        catppuccin-nvim
         conform-nvim
         gitsigns-nvim
-        catppuccin-nvim
         lazydev-nvim
+        multicursor-nvim
         nvim-lint
         nvim-treesitter.withAllGrammars
         snacks-nvim
-        multicursor-nvim
+        nvim-web-devicons
       ];
     };
   };
