@@ -37,10 +37,10 @@ inputs: {
         auto-session
         blink-cmp
         conform-nvim
+        gitsigns-nvim
         lazydev-nvim
         nvim-lint
         nvim-treesitter.withAllGrammars
-        oil-nvim
         snacks-nvim
       ];
     };
