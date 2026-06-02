@@ -49,6 +49,7 @@ inputs: {
         nvim-lint
         nvim-treesitter.withAllGrammars
         snacks-nvim
+        multicursor-nvim
       ];
     };
   };
