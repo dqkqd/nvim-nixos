@@ -18,12 +18,6 @@ inputs: {
 
   config = {
     settings.config_directory = ./.;
-    specs.colorscheme = {
-      data = with pkgs.vimPlugins; [
-        catppuccin-nvim
-      ];
-      before = ["INIT_MAIN"];
-    };
     specs.lzn = {
       data = with pkgs.vimPlugins; [
         lz-n
@@ -49,8 +43,8 @@ inputs: {
         multicursor-nvim
         nvim-lint
         nvim-treesitter.withAllGrammars
-        snacks-nvim
         nvim-web-devicons
+        snacks-nvim
       ];
     };
   };
