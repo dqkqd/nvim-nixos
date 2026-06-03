@@ -41,12 +41,27 @@ vim.lsp.config("tombi", {
   root_markers = { "tombi.toml", "pyproject.toml", ".git" },
 })
 
+vim.lsp.config("clangd", {
+  cmd = { "clangd" },
+  filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
+  root_markers = {
+    ".clangd",
+    ".clang-tidy",
+    ".clang-format",
+    "compile_commands.json",
+    "compile_flags.txt",
+    "configure.ac",
+    ".git",
+  },
+})
+
 -- enable
 vim.lsp.enable({
   "nixd",
   "lua_ls",
   "cssls",
   "tombi",
+  "clangd",
 })
 
 vim.lsp.inlay_hint.enable(true)
