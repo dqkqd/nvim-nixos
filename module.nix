@@ -36,6 +36,7 @@ inputs: {
       data = with pkgs.vimPlugins; [
         auto-session
         blink-cmp
+        bufferline-nvim
         catppuccin-nvim
         conform-nvim
         gitsigns-nvim
