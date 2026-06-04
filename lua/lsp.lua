@@ -42,7 +42,15 @@ vim.lsp.config("tombi", {
 })
 
 vim.lsp.config("clangd", {
-  cmd = { "clangd", "--clang-tidy" },
+  cmd = {
+    "clangd",
+    "--background-index",
+    "--clang-tidy",
+    "--header-insertion=iwyu",
+    "--completion-style=detailed",
+    "--function-arg-placeholders",
+    "--fallback-style=llvm",
+  },
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
   root_markers = {
     ".clangd",
