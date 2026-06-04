@@ -5,6 +5,7 @@ return {
     require("conform").setup({
 
       formatters_by_ft = {
+        ["*"] = { "trim_whitespace", "trim_newlines" },
         nix = { "alejandra" },
         lua = { "stylua" },
         css = { "prettierd" },
