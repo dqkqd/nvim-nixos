@@ -17,8 +17,9 @@ do
   end
 end
 
--- load basic options and keymaps
 require("options")
+require("keymaps")
+require("autocmds")
 
 -- load packages
 require("lz.n").load("plugins")
