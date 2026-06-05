@@ -41,6 +41,7 @@ inputs: {
         conform-nvim
         gitsigns-nvim
         lazydev-nvim
+        mini-pairs
         multicursor-nvim
         nvim-lint
         nvim-treesitter.withAllGrammars
