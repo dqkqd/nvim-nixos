@@ -30,6 +30,7 @@ set({ "n", "v", "x" }, "<leader>p", '"+p', { noremap = true, silent = true, desc
 set("i", "<C-p>", "<C-r><C-p>+", { noremap = true, silent = true, desc = "Paste from clipboard from within insert mode" })
 set("x", "<leader>P", '"_dP', { noremap = true, silent = true, desc = "Paste over selection without erasing unnamed register" })
 set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+set("n", "<leader>cr", vim.lsp.buf.rename, { desc = "Rename" })
 
 -- Tabs
 set("n", "<leader>bl", "<cmd>BufferLineCloseRight<cr>", { desc = "Delete Buffers to the Right" })
