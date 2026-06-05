@@ -141,5 +141,9 @@ vim.keymap.set("n", "<leader>6", "<cmd>BufferLineGoToBuffer 6<cr>", { desc = "Go
 vim.keymap.set("n", "<leader>7", "<cmd>BufferLineGoToBuffer 7<cr>", { desc = "Go to buffer 7" })
 vim.keymap.set("n", "<leader>8", "<cmd>BufferLineGoToBuffer 8<cr>", { desc = "Go to buffer 8" })
 vim.keymap.set("n", "<leader>9", "<cmd>BufferLineGoToBuffer 9<cr>", { desc = "Go to buffer 9" })
+
+-- copy relative path
+vim.keymap.set('n', '<leader>cp', function() vim.fn.setreg('+', vim.fn.expand('%:.')) end, { desc = 'Copy relative path' })
+
 -- stylua: ignore end
 -- luacheck: pop
