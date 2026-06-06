@@ -47,6 +47,8 @@ inputs: {
         nvim-treesitter.withAllGrammars
         nvim-web-devicons
         snacks-nvim
+        trouble-nvim
+        ts-comments-nvim
       ];
     };
   };
