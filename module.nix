@@ -31,6 +31,11 @@ inputs: {
 
         # snack picker requires sqlite
         sqlite
+
+        # make sure nix is always installed
+        nixd
+        alejandra
+        deadnix
       ];
       lazy = true;
       data = with pkgs.vimPlugins; [
