@@ -47,6 +47,7 @@ inputs: {
         crates-nvim
         gitsigns-nvim
         lazydev-nvim
+        lualine-nvim
         mini-pairs
         multicursor-nvim
         nvim-lint
