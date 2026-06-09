@@ -44,6 +44,7 @@ inputs: {
         bufferline-nvim
         catppuccin-nvim
         conform-nvim
+        crates-nvim
         gitsigns-nvim
         lazydev-nvim
         mini-pairs
@@ -51,6 +52,7 @@ inputs: {
         nvim-lint
         nvim-treesitter.withAllGrammars
         nvim-web-devicons
+        rustaceanvim
         snacks-nvim
         trouble-nvim
         ts-comments-nvim
