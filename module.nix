@@ -39,6 +39,7 @@ inputs: {
       ];
       lazy = true;
       data = with pkgs.vimPlugins; [
+        fidget-nvim
         auto-session
         blink-cmp
         bufferline-nvim
