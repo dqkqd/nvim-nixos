@@ -32,6 +32,12 @@ inputs: {
         # snack picker requires sqlite
         sqlite
 
+        # markdown
+        prettierd
+        marksman
+        markdownlint-cli2
+        markdown-toc
+
         # make sure nix is always installed
         nixd
         alejandra

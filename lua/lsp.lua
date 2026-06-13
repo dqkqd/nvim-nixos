@@ -63,6 +63,21 @@ vim.lsp.config("clangd", {
   },
 })
 
+vim.filetype.add({
+  extension = {
+    mdx = "markdown.mdx",
+  },
+})
+
+vim.lsp.config("marksman", {
+  cmd = {
+    "marksman",
+    "server",
+  },
+  filetypes = { "markdown", "markdown.mdx" },
+  root_markers = { ".marksman.toml", ".git" },
+})
+
 -- enable
 vim.lsp.enable({
   "nixd",
@@ -70,6 +85,7 @@ vim.lsp.enable({
   "cssls",
   "tombi",
   "clangd",
+  "marksman",
 })
 
 vim.lsp.inlay_hint.enable(true)
