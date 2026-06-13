@@ -25,6 +25,7 @@ return {
           end
         end, "Prev Hunk")
       end,
+      current_line_blame = true,
     })
   end,
 }
