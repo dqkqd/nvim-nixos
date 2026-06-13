@@ -53,6 +53,7 @@ inputs: {
         conform-nvim
         crates-nvim
         gitsigns-nvim
+        obsidian-nvim
         lazydev-nvim
         lualine-nvim
         mini-pairs
