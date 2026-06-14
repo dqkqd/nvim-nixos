@@ -32,3 +32,19 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.commentstring = "# %s"
   end,
 })
+
+vim.api.nvim_create_autocmd("BufReadPost", {
+  desc = "Mark files outside cwd as readonly",
+  callback = function(ev)
+    local fname = vim.api.nvim_buf_get_name(ev.buf)
+    if fname == "" then
+      return
+    end
+
+    local cwd = vim.uv.cwd()
+    if cwd and not vim.startswith(fname, cwd) then
+      vim.bo[ev.buf].readonly = true
+      vim.bo[ev.buf].modifiable = false
+    end
+  end,
+})
