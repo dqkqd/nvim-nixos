@@ -22,5 +22,8 @@ return {
         },
       },
     })
+
+    -- do not mix up marksman
+    vim.lsp.enable("marksman", false)
   end,
 }
