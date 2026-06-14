@@ -45,22 +45,23 @@ inputs: {
       ];
       lazy = true;
       data = with pkgs.vimPlugins; [
-        fidget-nvim
         auto-session
         blink-cmp
         bufferline-nvim
         catppuccin-nvim
         conform-nvim
         crates-nvim
+        fidget-nvim
         gitsigns-nvim
-        obsidian-nvim
         lazydev-nvim
         lualine-nvim
+        marks-nvim
         mini-pairs
         multicursor-nvim
         nvim-lint
         nvim-treesitter.withAllGrammars
         nvim-web-devicons
+        obsidian-nvim
         rustaceanvim
         snacks-nvim
         trouble-nvim
