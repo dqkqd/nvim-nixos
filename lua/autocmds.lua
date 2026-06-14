@@ -19,3 +19,16 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.spell = true
   end,
 })
+
+vim.filetype.add({
+  extension = {
+    slt = "sqllogictest",
+  },
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "sqllogictest",
+  callback = function()
+    vim.bo.commentstring = "# %s"
+  end,
+})
