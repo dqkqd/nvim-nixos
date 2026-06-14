@@ -41,6 +41,12 @@ vim.api.nvim_create_autocmd("BufReadPost", {
       return
     end
 
+    -- skip tmpdir (jjdescription)
+    local tmpdir = vim.uv.os_tmpdir()
+    if tmpdir ~= nil and vim.startswith(fname, tmpdir) then
+      return
+    end
+
     local cwd = vim.uv.cwd()
     if cwd and not vim.startswith(fname, cwd) then
       vim.bo[ev.buf].readonly = true
