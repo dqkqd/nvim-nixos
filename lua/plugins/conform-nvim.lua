@@ -33,6 +33,7 @@ return {
         c = { "clang-format" },
         cpp = { "clang-format" },
         rust = { "rustfmt" },
+        json = { "prettierd" },
         ["markdown"] = { "prettierd", "markdownlint-cli2", "markdown-toc" },
         ["markdown.mdx"] = { "prettierd", "markdownlint-cli2", "markdown-toc" },
       },

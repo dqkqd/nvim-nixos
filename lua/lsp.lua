@@ -35,6 +35,12 @@ vim.lsp.config("cssls", {
   },
 })
 
+vim.lsp.config("jsonls", {
+  cmd = { "vscode-json-language-server", "--stdio" },
+  filetypes = { "json", "jsonc" },
+  root_markers = { ".git" },
+})
+
 vim.lsp.config("tombi", {
   cmd = { "tombi", "lsp" },
   filetypes = { "toml" },
@@ -86,6 +92,7 @@ vim.lsp.enable({
   "tombi",
   "clangd",
   "marksman",
+  "jsonls",
 })
 
 vim.lsp.inlay_hint.enable(true)
