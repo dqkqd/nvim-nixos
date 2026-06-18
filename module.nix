@@ -38,6 +38,9 @@ inputs: {
         markdownlint-cli2
         markdown-toc
 
+        # css
+        vscode-langservers-extracted
+
         # make sure nix is always installed
         nixd
         alejandra

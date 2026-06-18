@@ -84,6 +84,52 @@ vim.lsp.config("marksman", {
   root_markers = { ".marksman.toml", ".git" },
 })
 
+vim.lsp.config("tsgo", {
+  cmd = {
+    "tsgo",
+    "--lsp",
+    "--stdio",
+  },
+  filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+  root_markers = {
+    ".git",
+    "bun.lock",
+    "bun.lockb",
+    "deno.json",
+    "deno.jsonc",
+    "deno.lock",
+    "package-lock.json",
+    "pnpm-lock.yaml",
+    "tsconfig.json",
+    "yarn.lock",
+  },
+  settings = {
+    typescript = {
+      inlayHints = {
+        enumMemberValues = {
+          enabled = true,
+        },
+        functionLikeReturnTypes = {
+          enabled = true,
+        },
+        parameterNames = {
+          enabled = "literals",
+          suppressWhenArgumentMatchesName = true,
+        },
+        parameterTypes = {
+          enabled = true,
+        },
+        propertyDeclarationTypes = {
+          enabled = true,
+        },
+        variableTypes = {
+          enabled = true,
+        },
+      },
+    },
+  },
+})
+
 -- enable
 vim.lsp.enable({
   "nixd",
@@ -93,6 +139,7 @@ vim.lsp.enable({
   "clangd",
   "marksman",
   "jsonls",
+  "tsgo",
 })
 
 vim.lsp.inlay_hint.enable(true)
