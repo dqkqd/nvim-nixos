@@ -145,6 +145,23 @@ vim.lsp.config("tsgo", {
   },
 })
 
+vim.lsp.config("svelteserver", {
+  cmd = { "svelteserver", "--stdio" },
+  filetypes = { "svelte" },
+  root_markers = {
+    ".git",
+    "bun.lock",
+    "bun.lockb",
+    "deno.json",
+    "deno.jsonc",
+    "deno.lock",
+    "package-lock.json",
+    "pnpm-lock.yaml",
+    "tsconfig.json",
+    "yarn.lock",
+  },
+})
+
 -- enable
 vim.lsp.enable({
   "nixd",
@@ -155,6 +172,7 @@ vim.lsp.enable({
   "marksman",
   "jsonls",
   "tsgo",
+  "svelteserver",
 })
 
 vim.lsp.inlay_hint.enable(true)

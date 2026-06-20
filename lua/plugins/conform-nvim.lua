@@ -37,6 +37,7 @@ return {
         jsonc = { "prettier" },
         javascript = { "prettier" },
         typescript = { "prettier" },
+        svelte = { "prettier" },
         ["markdown"] = { "prettier", "markdownlint-cli2", "markdown-toc" },
         ["markdown.mdx"] = { "prettier", "markdownlint-cli2", "markdown-toc" },
       },
