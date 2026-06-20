@@ -34,6 +34,7 @@ return {
         cpp = { "clang-format" },
         rust = { "rustfmt" },
         json = { "prettierd" },
+        jsonc = { "prettierd" },
         javascript = { "prettierd" },
         typescript = { "prettierd" },
         ["markdown"] = { "prettierd", "markdownlint-cli2", "markdown-toc" },
