@@ -1,5 +1,15 @@
 return {
   "gitsigns.nvim",
+  event = { "BufReadPre", "BufNewFile" },
+
+  -- Dynamically check if the current directory is a git repository
+  enabled = function()
+    local git_dir = vim.fs.find(".git", {
+      path = vim.fn.expand("%:p:h"),
+      upward = true,
+    })
+    return #git_dir > 0
+  end,
   after = function()
     require("gitsigns").setup({
       on_attach = function(bufnr)
