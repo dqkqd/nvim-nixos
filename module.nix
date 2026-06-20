@@ -59,6 +59,7 @@ inputs: {
         img-clip-nvim
         lazydev-nvim
         lualine-nvim
+        markdown-preview-nvim
         marks-nvim
         mini-pairs
         multicursor-nvim
