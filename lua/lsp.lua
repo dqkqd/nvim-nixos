@@ -46,6 +46,10 @@ vim.lsp.config("jsonls", {
           fileMatch = { "tsconfig*.json" },
           url = "https://json.schemastore.org/tsconfig.json",
         },
+        {
+          fileMatch = { "manifest.json" },
+          url = "https://www.schemastore.org/webextension.json",
+        },
       },
       validate = { enable = true },
     },
