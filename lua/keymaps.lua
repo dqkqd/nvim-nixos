@@ -51,5 +51,18 @@ set("n", "<leader>9", "<cmd>BufferLineGoToBuffer 9<cr>", { desc = "Go to buffer 
 -- copy relative path
 set('n', '<leader>cp', function() vim.fn.setreg('+', vim.fn.expand('%:.')) end, { desc = 'Copy relative path' })
 
+
+local diagnostic_goto = function(next, severity)
+  return function()
+    vim.diagnostic.jump({
+      count = (next and 1 or -1) * vim.v.count1,
+      severity = severity and vim.diagnostic.severity[severity] or nil,
+      float = true,
+    })
+  end
+end
+set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
+set("n", "]d", diagnostic_goto(true), { desc = "Next Diagnostic" })
+set("n", "[d", diagnostic_goto(false), { desc = "Prev Diagnostic" })
 -- stylua: ignore end
 -- luacheck: pop
