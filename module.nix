@@ -56,6 +56,7 @@ inputs: {
         crates-nvim
         fidget-nvim
         gitsigns-nvim
+        img-clip-nvim
         lazydev-nvim
         lualine-nvim
         marks-nvim
