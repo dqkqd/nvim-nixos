@@ -33,7 +33,7 @@ inputs: {
         sqlite
 
         # markdown
-        prettierd
+        prettier
         marksman
         markdownlint-cli2
         markdown-toc
