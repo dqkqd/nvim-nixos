@@ -39,6 +39,17 @@ vim.lsp.config("jsonls", {
   cmd = { "vscode-json-language-server", "--stdio" },
   filetypes = { "json", "jsonc" },
   root_markers = { ".git" },
+  settings = {
+    json = {
+      schemas = {
+        {
+          fileMatch = { "tsconfig*.json" },
+          url = "https://json.schemastore.org/tsconfig.json",
+        },
+      },
+      validate = { enable = true },
+    },
+  },
 })
 
 vim.lsp.config("tombi", {
