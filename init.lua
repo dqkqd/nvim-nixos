@@ -23,7 +23,7 @@ require("keymaps")
 -- load lsp
 require("lsp")
 
-require("autocmds")
-
 -- load packages
 require("lz.n").load("plugins")
+
+require("autocmds")
