@@ -48,7 +48,7 @@ vim.lsp.config("jsonls", {
         },
         {
           fileMatch = { "manifest.json" },
-          url = "https://www.schemastore.org/webextension.json",
+          url = "https://raw.githubusercontent.com/dqkqd/schemastore/refs/heads/push-kztzllsqstyp/src/schemas/json/webextension.json",
         },
       },
       validate = { enable = true },
