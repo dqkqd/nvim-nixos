@@ -10,17 +10,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
--- Enable treesitter
-vim.api.nvim_create_autocmd("FileType", {
-  group = augroup("enable_treesitter"),
-  callback = function(e)
-    if vim.bo[e.buf].buftype ~= "" then
-      return
-    end
-    vim.treesitter.start()
-  end,
-})
-
 -- wrap and check for spell in text filetypes
 vim.api.nvim_create_autocmd("FileType", {
   group = augroup("wrap_spell"),
